@@ -2,6 +2,8 @@
 import Link from 'next/link'
 import 'font-awesome/css/font-awesome.min.css'
 import Image from 'next/image'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser } from '@fortawesome/free-solid-svg-icons'
 
 export default function Header() {
   return (
@@ -22,7 +24,7 @@ export default function Header() {
         </div>
 
         {/* Links do meio */}
-        <ul className="flex space-x-50 text-gray-700 text-lg font-medium">
+        <ul className="flex space-x-15 text-gray-700 text-1xl font-medium">
           <li>
             <Link
               href="/consultar"
@@ -51,10 +53,7 @@ export default function Header() {
 
         {/* Ícone de perfil */}
         <div className="relative inline-block group">
-          <button className="p-2 border-1 border-black rounded-full focus:outline-none">
-            <i className="fa fa-user-circle text-2xl text--700"></i>
-          </button>
-
+          <FontAwesomeIcon icon={faUser} size="lg" />
           {/* Hover do perfil */}
           <div className="absolute hidden bg-white border border-gray-200 rounded left-[-170px] -mt-5 shadow-lg w-48 group-hover:block">
             <ul className="space-y-2 text-sm text-gray-700">

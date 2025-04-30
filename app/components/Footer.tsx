@@ -6,7 +6,7 @@ function Footer() {
   return (
     <footer className="bg-[#011C2B] text-white text-center py-4">
       {/* Logo e Slogan */}
-      <div className="flex justify-center items-center mx-auto flex-col">
+      <div className="flex justify-center items-center mx-auto flex-col gap-3">
         <Image
           src="/assets/logo2.jpg"
           alt="Logo"
