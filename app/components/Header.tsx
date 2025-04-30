@@ -51,25 +51,34 @@ export default function Header() {
 
         {/* Ícone de perfil */}
         <div className="relative inline-block group">
-          <button className="p-2 bg-gray-200 rounded-full focus:outline-none">
-            <i className="fa fa-user-circle text-2xl text-gray-700"></i>
+          <button className="p-2 border-1 border-black rounded-full focus:outline-none">
+            <i className="fa fa-user-circle text-2xl text--700"></i>
           </button>
 
           {/* Hover do perfil */}
-          <div className="absolute hidden bg-white border border-gray-200 rounded left-[-170px] shadow-lg w-48 group-hover:block">
+          <div className="absolute hidden bg-white border border-gray-200 rounded left-[-170px] -mt-5 shadow-lg w-48 group-hover:block">
             <ul className="space-y-2 text-sm text-gray-700">
               <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                <a
+                  href="#"
+                  className="block px-4 py-2 hover:bg-gray-100 hover:text-[#003366]"
+                >
                   Minhas Consultas
                 </a>
               </li>
               <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                <a
+                  href="#"
+                  className="block px-4 py-2 hover:bg-gray-100 hover:text-[#003366]"
+                >
                   Perfil
                 </a>
               </li>
               <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                <a
+                  href="#"
+                  className="block px-4 py-2 hover:bg-gray-100 hover:text-[#003366]"
+                >
                   Sair
                 </a>
               </li>
