@@ -1,6 +1,3 @@
-// <<<<<<< Updated upstream
-// function Home() {}
-// =======
 'use client'
 import Image from 'next/image'
 import { useRef } from 'react'
@@ -61,7 +58,7 @@ export default function Home() {
       </section>
 
       {/* Seção 2 */}
-      <section id="sobre" className="w-full max-w-5xl pt-20 text-center mt-20">
+      <section id="sobre" className="w-full max-w-5xl pt-30 text-center mt-20">
         <h1 className="text-5xl text-[#003366] mb-4">
           Quem
           <span className="text-[#003366] font-bold"> Somos?</span>
@@ -143,10 +140,136 @@ export default function Home() {
       {/* Seção 3 */}
       <section
         id="contato"
-        className="w-full pt-20 mt-20 max-w-5xl text-center"
+        className="w-full pt-30 mt-20 max-w-5xl mx-auto text-center"
       >
-        <h2 className="text-3xl font-bold mb-4">Seção 3</h2>
-        <p className="text-gray-600">Conteúdo da terceira seção aqui.</p>
+        <h1 className="text-5xl text-[#003366] mb-10">
+          Entre em <span className="font-bold">Contato</span>
+        </h1>
+
+        <div className="flex flex-col md:flex-row bg-white shadow-md rounded-xl overflow-hidden min-h-[600px]">
+          {/* Lado esquerdo com imagem de fundo */}
+          <div
+            className="md:w-1/2 bg-cover bg-center relative text-white text-left flex flex-col"
+            style={{ backgroundImage: "url('/assets/bg_form.png')" }}
+          >
+            <div className="relative z-10 p-10 max-w-[400px]">
+              <h2 className="text-2xl font-bold">Informações de Contato</h2>
+              <p className="mb-4 text-[#C9C9C9]">
+                Preencha o formulário e agurade o retorno
+              </p>
+              <div className="break-words">
+                <p className="mt-20 text-[#C9C9C9]">📞 +55 11 99999-9999</p>
+                <p></p>
+              </div>
+              <div className="break-words">
+                <p className="mt-10 text-[#C9C9C9]">
+                  📧 contato@placacheck.com{' '}
+                </p>
+              </div>
+              <div className="break-words">
+                <p className="mt-10 text-[#C9C9C9]">
+                  📍 132 Dartmouth Street Boston, Massachusetts 02156 United
+                  States
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Lado direito com o formulário */}
+          <div className="md:w-1/2 p-10 bg-white flex flex-col -ml-30">
+            <form className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+              <div>
+                <label
+                  htmlFor="nome"
+                  className="block text-gray-700 font-medium mb-1"
+                >
+                  Primeiro Nome
+                </label>
+                <input
+                  id="nome"
+                  type="text"
+                  placeholder="Seu nome"
+                  className="w-full border-b border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-white"
+                />
+              </div>
+              <div className="ml-10">
+                <label
+                  htmlFor="sobrenome"
+                  className="block text-gray-700 font-medium mb-1"
+                >
+                  Sobrenome
+                </label>
+                <input
+                  id="sobrenome"
+                  type="text"
+                  placeholder="Seu sobrenome"
+                  className="w-50 border-b border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-white"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-gray-700 font-medium mb-1"
+                >
+                  Email
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="seuemail@gmail.com"
+                  className="w-full border-b border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-white"
+                />
+              </div>
+              <div className="ml-10">
+                <label
+                  htmlFor="telefone"
+                  className="block text-gray-700 font-medium mb-1"
+                >
+                  Telefone
+                </label>
+                <input
+                  id="telefone"
+                  type="text"
+                  placeholder="1199999999"
+                  className="w-50 border-b border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-white"
+                />
+              </div>
+              <div className="md:col-span-2 mt-10">
+                <label
+                  htmlFor="mensagem"
+                  className="block text-gray-700 font-medium mb-1"
+                >
+                  Mensagem
+                </label>
+                <textarea
+                  id="mensagem"
+                  rows={4}
+                  placeholder="Escreva sua mensagem..."
+                  className="w-full border-b border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-white"
+                ></textarea>
+              </div>
+
+              <div>
+                <Image
+                  src="/assets/flecha.png"
+                  width={400}
+                  height={400}
+                  alt="imagem"
+                  className="ml-30"
+                />
+              </div>
+
+              <div className="md:col-span-2">
+                <button
+                  type="submit"
+                  className="bg-[#003366] text-white py-2 px-6 rounded-lg hover:bg-[#011C2B] ml-80 transition w-50 cursor-pointer"
+                >
+                  Enviar
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
       </section>
     </div>
   )
