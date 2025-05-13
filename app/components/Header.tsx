@@ -7,7 +7,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons'
 
 export default function Header() {
   return (
-    <header className="w-full bg-white shadow-md">
+    <header className="w-full fixed bg-white shadow-md  z-1000">
       <nav className="container mx-auto px-4 h-20 flex items-center justify-between">
         {/* Logo à esquerda */}
         <div className="h-full flex items-center mt-[-10px]">
@@ -24,10 +24,11 @@ export default function Header() {
         </div>
 
         {/* Links do meio */}
-        <ul className="flex space-x-15 text-gray-700 text-1xl font-medium">
+
+        <ul className="flex space-x-15 mr-30 text-gray-700 text-1xl font-medium">
           <li>
             <Link
-              href="/consultar"
+              href="#consultar"
               className="text-[#003366] border-b-2 border-transparent hover:border-[#011C2B] transition-all duration-400"
             >
               Consultar
@@ -35,7 +36,7 @@ export default function Header() {
           </li>
           <li>
             <Link
-              href="/sobre"
+              href="#sobre"
               className="text-[#003366] border-b-2 border-transparent hover:border-[#011C2B] transition-all duration-400"
             >
               Sobre nós
@@ -43,7 +44,7 @@ export default function Header() {
           </li>
           <li>
             <Link
-              href="/contato"
+              href="#contato"
               className="text-[#003366] border-b-2 border-transparent hover:border-[#011C2B] transition-all duration-400"
             >
               Contato

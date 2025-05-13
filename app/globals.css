@@ -5,6 +5,24 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes blink-border {
+  0%,
+  100% {
+    border-color: #003366; /* vermelho */
+  }
+  50% {
+    border-color: #fff; /* branco, ou qualquer cor neutra */
+  }
+}
+
+.blink-border {
+  animation: blink-border 0.5s ease-in-out 4; /* pisca 4 vezes (2s) */
+}
+
 /* Variáveis globais para temas claros e escuros */
 :root {
   /* --background: #ffffff;
