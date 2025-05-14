@@ -28,7 +28,7 @@ export default function Header() {
         <ul className="flex space-x-15 mr-30 text-gray-700 text-1xl font-medium">
           <li>
             <Link
-              href="#consultar"
+              href="/#consultar"
               className="text-[#003366] border-b-2 border-transparent hover:border-[#011C2B] transition-all duration-400"
             >
               Consultar
@@ -36,7 +36,7 @@ export default function Header() {
           </li>
           <li>
             <Link
-              href="#sobre"
+              href="/#sobre"
               className="text-[#003366] border-b-2 border-transparent hover:border-[#011C2B] transition-all duration-400"
             >
               Sobre nós
@@ -44,7 +44,7 @@ export default function Header() {
           </li>
           <li>
             <Link
-              href="#contato"
+              href="/#contato"
               className="text-[#003366] border-b-2 border-transparent hover:border-[#011C2B] transition-all duration-400"
             >
               Contato
@@ -68,7 +68,7 @@ export default function Header() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/profile"
                   className="block px-4 py-2 hover:bg-gray-100 hover:text-[#003366]"
                 >
                   Perfil
