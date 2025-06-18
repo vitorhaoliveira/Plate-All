@@ -1,50 +1,42 @@
 @import 'tailwindcss';
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
-html {
-  scroll-behavior: smooth;
-}
-
+/* Animação de borda piscante */
 @keyframes blink-border {
-  0%,
-  100% {
-    border-color: #003366; /* vermelho */
+  0%, 100% {
+    border-color: #003366;
   }
   50% {
-    border-color: #fff; /* branco, ou qualquer cor neutra */
+    border-color: #fff;
   }
 }
 
 .blink-border {
-  animation: blink-border 0.5s ease-in-out 4; /* pisca 4 vezes (2s) */
+  animation: blink-border 0.5s ease-in-out 4;
 }
 
 /* Variáveis globais para temas claros e escuros */
 :root {
-  /* --background: #ffffff;
-  --foreground: #171717;
-
-  --color-background: var(--background);
-  --color-foreground: var(--foreground); */
-
-  --font-sans: 'Plus Jakarta Sans', 'Arial', 'Helvetica', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;
   --font-mono: 'Courier New', monospace;
+  --background: #ffffff;
+  --foreground: #171717;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* --background: #0a0a0a;
-    --foreground: #ededed; */
+    --background: #0a0a0a;
+    --foreground: #ededed;
   }
 }
 
-/* Estilos base para o corpo da aplicação */
+/* Estilos base */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: var(--background);
-  color: var(--foreground);
   font-family: var(--font-sans);
 }

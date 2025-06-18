@@ -32,9 +32,12 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center px-4 py-10 gap-2">
+    <div className="flex flex-col items-center justify-center px-4 py-10 gap-20">
       {/* Seção 1 */}
-      <section id="consultar" className="w-full pt-30 max-w-5xl text-center">
+      <section
+        id="consultar"
+        className="w-full pt-30 max-w-5xl mt-44 mb-20 text-center"
+      >
         <h1 className="text-5xl text-[#003366] mb-4">
           Consulta de Placa em
           <span className="text-[#003366] font-bold"> Segundos</span>
@@ -114,14 +117,13 @@ export default function Home() {
                 </span>
                 {card.title.slice(3)}
               </h2>
-              <p className="text-gray-600 text-xl mt-10 text-left text-justify">
+              <p className="text-gray-600 text-xl mt-10 text-left">
                 {card.text}
               </p>
             </div>
           ))}
         </div>
 
-        {/* Botão que ativa scroll e piscar o input */}
         <button
           onClick={() => {
             document
@@ -129,7 +131,7 @@ export default function Home() {
               ?.scrollIntoView({ behavior: 'smooth' })
             setTimeout(() => {
               handleHighlightInput()
-            }, 600) // espera o scroll terminar
+            }, 600)
           }}
           className="bg-[#003366] text-xl mt-15 text-white px-10 py-2 rounded-full hover:bg-[#011C2B] transition cursor-pointer"
         >
@@ -147,7 +149,6 @@ export default function Home() {
         </h1>
 
         <div className="flex flex-col md:flex-row bg-white shadow-md rounded-xl overflow-hidden min-h-[600px]">
-          {/* Lado esquerdo com imagem de fundo */}
           <div
             className="md:w-1/2 bg-cover bg-center relative text-white text-left flex flex-col"
             style={{ backgroundImage: "url('/assets/bg_form.png')" }}
@@ -175,7 +176,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Lado direito com o formulário */}
           <div className="md:w-1/2 p-10 bg-white flex flex-col -ml-30">
             <form className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
               <div>
