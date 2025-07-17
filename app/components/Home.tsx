@@ -1,8 +1,8 @@
 'use client'
-import Image from 'next/image'
+// import Image from 'next/image'
 import { useRef } from 'react'
 
-export default function Home() {
+export function Home() {
   const inputRef = useRef<HTMLInputElement>(null)
   // >>>>>>> Stashed changes
 
@@ -36,9 +36,9 @@ export default function Home() {
       {/* Seção 1 */}
       <section
         id="consultar"
-        className="w-full pt-30 max-w-5xl mt-44 mb-20 text-center"
+        className="w-full pt-20 max-w-5xl mb-20 text-center"
       >
-        <h1 className="text-5xl text-[#003366] mb-4">
+        <h1 className="text-[6rem] text-[#003366] mb-4 leading-22">
           Consulta de Placa em
           <span className="text-[#003366] font-bold"> Segundos</span>
         </h1>
@@ -61,18 +61,23 @@ export default function Home() {
       </section>
 
       {/* Seção 2 */}
-      <section id="sobre" className="w-full max-w-5xl pt-30 text-center mt-20">
-        <h1 className="text-5xl text-[#003366] mb-4">
-          Quem
-          <span className="text-[#003366] font-bold"> Somos?</span>
-        </h1>
-        <div className="flex flex-row items-center justify-between p-10">
-          <p className="text-gray-600 text-2xl max-w-[600px] text-justify">
-            Bem-vindo à PlacaCheck, a plataforma revolucionária para consulta de
-            placas de veículos! Somos uma empresa especializada em tecnologia e
-            inovação, comprometida em oferecer informações precisas e confiáveis
-            sobre veículos em poucos segundos.
-          </p>
+      <section
+        id="sobre"
+        className="w-full max-w-5xl pt-30 text-center mt-20 flex flex-col"
+      >
+        {/* <div className="flex flex-row items-center justify-between p-10 mb-[10rem]">
+          <div className="flex flex-col items-start">
+            <h1 className="text-5xl text-[#003366] mb-1">
+              Quem
+              <span className="text-[#003366] font-bold"> Somos?</span>
+            </h1>
+            <p className="text-gray-600 text-2xl max-w-[600px] text-justify">
+              Bem-vindo à PlacaCheck, a plataforma revolucionária para consulta
+              de placas de veículos! Somos uma empresa especializada em
+              tecnologia e inovação, comprometida em oferecer informações
+              precisas e confiáveis sobre veículos em poucos segundos.
+            </p>
+          </div>
           <Image
             src="/assets/vetor.png"
             width={400}
@@ -80,48 +85,49 @@ export default function Home() {
             alt="imagem"
             className="ml-10"
           />
-        </div>
+        </div> */}
 
-        <h1 className="text-4xl text-[#003366] mb-10 text-center">
-          Te oferecemos mais de{' '}
-          <span className="text-[#003366] font-bold">X</span> dados sobre a
-          placa que você busca!
-        </h1>
-
-        <div className="flex flex-row gap-6">
-          {[
-            {
-              title: 'Informações',
-              text: 'Consiga informações sobre a cor, modelo, categoria e muito mais.'
-            },
-            {
-              title: 'FIPE',
-              text: 'Utilize as informações da tabela FIPE para consultar o valor de mercado do veículo.'
-            },
-            {
-              title: 'Proprietário',
-              text: 'Descubra o proprietário e verifique dados importantes, antes de concluir a transação.'
-            },
-            {
-              title: 'Multas e Débitos',
-              text: 'Multas em aberto, IPVA atrasado e taxas a pagar.'
-            }
-          ].map((card, index) => (
-            <div
-              key={index}
-              className="bg-white border-1 border-gray-100 w-60 h-[285px] rounded-xl shadow-md p-4 transform transition duration-300 hover:scale-105 hover:shadow-xl shadow-[#003366]"
-            >
-              <h2 className="text-2xl text-[#003366] mb-2 text-left">
-                <span className="border-b-2 border-gray-400 pb-2">
-                  {card.title.slice(0, 3)}
-                </span>
-                {card.title.slice(3)}
-              </h2>
-              <p className="text-gray-600 text-xl mt-10 text-left">
-                {card.text}
-              </p>
-            </div>
-          ))}
+        <div>
+          <h1 className="text-4xl text-[#003366] mb-10 text-center">
+            Te oferecemos mais de{' '}
+            <span className="text-[#003366] font-bold">X</span> dados sobre a
+            placa que você busca!
+          </h1>
+          <div className="flex flex-row gap-6">
+            {[
+              {
+                title: 'Informações',
+                text: 'Consiga informações sobre a cor, modelo, categoria e muito mais.'
+              },
+              {
+                title: 'FIPE',
+                text: 'Utilize as informações da tabela FIPE para consultar o valor de mercado do veículo.'
+              },
+              {
+                title: 'Proprietário',
+                text: 'Descubra o proprietário e verifique dados importantes, antes de concluir a transação.'
+              },
+              {
+                title: 'Multas e Débitos',
+                text: 'Multas em aberto, IPVA atrasado e taxas a pagar.'
+              }
+            ].map((card, index) => (
+              <div
+                key={index}
+                className="bg-white border-1 border-gray-100 w-60 h-[285px] rounded-xl shadow-md p-4 transform transition duration-300 hover:scale-105 hover:shadow-xl shadow-[#003366]"
+              >
+                <h2 className="text-2xl text-[#003366] mb-2 text-left">
+                  <span className="border-b-2 border-gray-400 pb-2">
+                    {card.title.slice(0, 3)}
+                  </span>
+                  {card.title.slice(3)}
+                </h2>
+                <p className="text-gray-600 text-xl mt-10 text-left">
+                  {card.text}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
         <button
@@ -140,7 +146,7 @@ export default function Home() {
       </section>
 
       {/* Seção 3 */}
-      <section
+      {/* <section
         id="contato"
         className="w-full pt-30 mt-20 max-w-5xl mx-auto text-center"
       >
@@ -270,7 +276,7 @@ export default function Home() {
             </form>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }

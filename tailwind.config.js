@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        hero: "url('/assets/Rectangle.png')"
+      },
       fontFamily: {
         jakarta: ['"Plus Jakarta Sans"', 'sans-serif']
       },

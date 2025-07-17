@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 
-function SignUpPage() {
+export function SignUpPage() {
   const [nome, setNome] = useState('')
   const [email, setEmail] = useState('')
   const [senha, setSenha] = useState('')
@@ -68,5 +68,3 @@ function SignUpPage() {
     </div>
   )
 }
-
-export default SignUpPage

@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import 'font-awesome/css/font-awesome.min.css'
 
-function Footer() {
+export function Footer() {
   return (
     <footer className="bg-[#011C2B] text-white text-center py-4">
       {/* Logo e Slogan */}
@@ -118,5 +118,3 @@ function Footer() {
     </footer>
   )
 }
-
-export default Footer

@@ -1,11 +1,9 @@
 'use client'
 
-function Queries() {
+export function Queries() {
   return (
     <div>
       <p>queries</p>
     </div>
   )
 }
-
-export default Queries

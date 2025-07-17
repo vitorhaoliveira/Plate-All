@@ -5,12 +5,12 @@ import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 
-export default function Header() {
+export function Header() {
   return (
-    <header className="w-full fixed bg-white shadow-md  z-1000">
-      <nav className="container mx-auto px-4 h-20 flex items-center justify-between">
+    <header className="bg-hero w-[95%] flex items-center justify-center shadow-[0_4px_20px_rgba(0,0,0,0.15)] my-8 mx-auto rounded-4xl">
+      <nav className="w-full h-20 flex items-center justify-around">
         {/* Logo à esquerda */}
-        <div className="h-full flex items-center mt-[-10px]">
+        <div className="h-full flex items-center">
           <Link href="/">
             <Image
               src="/assets/logo.jpg"
@@ -59,20 +59,20 @@ export default function Header() {
           <div className="absolute hidden bg-white border border-gray-200 rounded left-[-170px] -mt-5 shadow-lg w-48 group-hover:block">
             <ul className="space-y-2 text-sm text-gray-700">
               <li>
-                <a
+                <Link
                   href="#"
                   className="block px-4 py-2 hover:bg-gray-100 hover:text-[#003366]"
                 >
                   Minhas Consultas
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/profile"
                   className="block px-4 py-2 hover:bg-gray-100 hover:text-[#003366]"
                 >
                   Perfil
-                </a>
+                </Link>
               </li>
               <li>
                 <a

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 
-function SignInPage() {
+export function SignInPage() {
   const [email, setEmail] = useState('')
   const [senha, setSenha] = useState('')
   const [erro, setErro] = useState('')
@@ -50,5 +50,3 @@ function SignInPage() {
     </div>
   )
 }
-
-export default SignInPage

@@ -1,7 +1,7 @@
-'use cliente'
+'use client'
 
-import Home from './components/Home'
+import { Home } from './components/Home'
 
-export default function conteudo() {
+export default function Page() {
   return <Home />
 }
