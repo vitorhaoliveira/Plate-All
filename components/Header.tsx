@@ -2,8 +2,7 @@
 import Link from 'next/link'
 import 'font-awesome/css/font-awesome.min.css'
 import Image from 'next/image'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser } from '@fortawesome/free-solid-svg-icons'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
 export function Header() {
   return (
@@ -54,7 +53,10 @@ export function Header() {
 
         {/* Ícone de perfil */}
         <div className="relative inline-block group">
-          <FontAwesomeIcon icon={faUser} size="lg" />
+          <Avatar>
+            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
           {/* Hover do perfil */}
           <div className="absolute hidden bg-white border border-gray-200 rounded left-[-170px] -mt-5 shadow-lg w-48 group-hover:block">
             <ul className="space-y-2 text-sm text-gray-700">
