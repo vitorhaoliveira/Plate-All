@@ -5,7 +5,7 @@ import 'font-awesome/css/font-awesome.min.css'
 
 export function Footer() {
   return (
-    <footer className="bg-[#011C2B] text-white text-center py-4">
+    <footer className="bg-[#011C2B] text-white text-center py-4 w-full">
       {/* Logo e Slogan */}
       <div className="flex justify-center items-center mx-auto flex-col gap-3">
         <Image

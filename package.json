@@ -10,16 +10,20 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@heroicons/react": "^2.2.0",
+    "@mui/material": "^7.2.0",
     "@radix-ui/react-avatar": "^1.1.10",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "font-awesome": "^4.7.0",
     "lucide-react": "^0.525.0",
     "next": "15.3.1",
+    "next-auth": "^4.24.11",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^3.3.1"

@@ -54,8 +54,8 @@ export function Header() {
         {/* Ícone de perfil */}
         <div className="relative inline-block group">
           <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" />
-            <AvatarFallback>CN</AvatarFallback>
+            <AvatarImage src="https://github.com/vitorhaoliveira.png" />
+            <AvatarFallback>Photo</AvatarFallback>
           </Avatar>
           {/* Hover do perfil */}
           <div className="absolute hidden bg-white border border-gray-200 rounded left-[-170px] -mt-5 shadow-lg w-48 group-hover:block">

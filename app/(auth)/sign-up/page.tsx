@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 
-export function SignUpPage() {
+export default function SignUpPage() {
   const [nome, setNome] = useState('')
   const [email, setEmail] = useState('')
   const [senha, setSenha] = useState('')

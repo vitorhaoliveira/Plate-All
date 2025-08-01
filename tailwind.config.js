@@ -15,12 +15,10 @@ export default {
         jakarta: ['"Plus Jakarta Sans"', 'sans-serif']
       },
       colors: {
-        primary: '#1e40af',
-        secondary: '#64748b',
+        primary: '#011C2B',
+        secondary: '#003366',
         background: '#f8fafc',
         danger: '#dc2626',
-        'azul-claro': '#003366',
-        'azul-esc': '#011C2B',
         cinza: '#7D7D7D',
         preto: '#121212'
       }
