@@ -4,12 +4,13 @@ import TextField from '@mui/material/TextField'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { GoogleLogin, GoogleOAuthProvider } from '@react-oauth/google'
 
 export default function LoginPage() {
   return (
     <div className="h-[100vh] flex flex-col items-center gap-[3rem] bg-gradient-to-b from-[#011C2B] to-white">
       <header className="h-[10vh] w-full flex items-center justify-end px-12">
-        <button className="text-white px-[2rem] py-[.5rem] border-2 cursor-pointer">
+        <button className="text-white px-[2rem] py-[.5rem] border-2 hover:bg-[#011C2B] cursor-pointer transition-colors">
           Cadastrar
         </button>
       </header>
@@ -77,11 +78,23 @@ export default function LoginPage() {
         >
           Esqueceu sua senha?
         </Link>
+        <div>
+          <p className="text-center text-[.8rem] text-gray-600">ou</p>
+        </div>
+        <div>
+          <GoogleOAuthProvider clientId="SUA_CLIENT_ID">
+            <GoogleLogin
+              onSuccess={credentialResponse => {
+                console.log(credentialResponse)
+              }}
+              onError={() => {
+                console.log('Login Failed')
+              }}
+            />
+          </GoogleOAuthProvider>
+        </div>
       </form>
       <footer className="flex flex-col items-center justify-center">
-        {/* <p className="text-[.7rem] text-gray-400">
-          @ 2025. Todos direitos reservados. Plate All
-        </p> */}
         <Image
           src="/assets/logo.jpg"
           alt="Logo"
